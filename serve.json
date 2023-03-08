@@ -1,0 +1,32 @@
+{
+  "headers": [
+    { "source" : "**/*.@(jpg|jpeg|gif|png|txt)"
+    , "headers" :
+        [{ "key" : "Access-Control-Allow-Origin"
+         , "value" : "*"
+         },
+	 { "key":"Access-Control-Allow-Origin", 
+           "value": "http://localhost:8000"
+	 }
+        ,{ "key" : "Access-Control-Allow-Headers"
+         , "value" : "Origin, X-Requested-With, Content-Type, Accept, Range"
+         },
+	 { "key" : "Content-Type"
+         , "value" : "application/json"
+         },
+	 { "key" : "Access-Control-Allow-Methods"
+         , "value" : "*"
+         },
+	 { "key" : "Access-Control-Allow-Headers"
+         , "value" : "*"
+         },
+	 { "key" : "Sec-Fetch-Site"
+         , "value" : "cross-site"
+         },
+	 { "key" : "Referrer-Policy"
+         , "value" : "origin-when-cross-origin"
+         }
+        ]
+    }
+  ]
+}

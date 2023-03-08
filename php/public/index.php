@@ -3,18 +3,14 @@
 /**
  * https://www.php.net/manual/en/curl.examples-basic.php
  */
-//$PHP_URL_PATH="https://jsonplaceholder.typicode.com/comments?postId=3"
+$url="https://jsonplaceholder.typicode.com/comments?postId=3";
 $name = $_GET['name'];
 
-if ($name == null) {
-    $name = 'guest';
-}
 
-$message = $_GET['message'];
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$output = curl_exec($ch);
+echo $output;
 
-if ($message == null) {
-    $message = 'hello there';
-}
-
-echo "$name says: $message";
-
+curl_close($ch);    

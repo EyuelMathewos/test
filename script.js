@@ -7,8 +7,12 @@ document.getElementById('search-input').addEventListener('keyup', async (e) => {
     // ---
     // Use es6
 
-    const res = await fetch('http://localhost:8000/')
-    const json = await res.json()
+    const res = await fetch('http://localhost:8000',{
+     mode: "cors",
+     method: "GET",
+    })
+	//const json = await res.json()
+	const json = []
 
     const result = `<li>${json.join('</li><li>')}</li>`
     document.getElementById('results').innerHTML = result

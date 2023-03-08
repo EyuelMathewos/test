@@ -3,5 +3,8 @@
 /**
  * https://www.php.net/manual/en/curl.examples-basic.php
  */
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json");
+$PHP_URL_PATH=https://jsonplaceholder.typicode.com/comments?postId=3
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+     // The request is using the POST method
+echo "hello owrl";
+}

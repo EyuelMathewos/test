@@ -11,8 +11,9 @@ document.getElementById('search-input').addEventListener('keyup', async (e) => {
      mode: "cors",
      method: "GET",
     })
+	console.log(res);
 	//const json = await res.json()
-	const json = []
+	const json = ["hello"]
 
     const result = `<li>${json.join('</li><li>')}</li>`
     document.getElementById('results').innerHTML = result
